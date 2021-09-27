@@ -8,6 +8,7 @@ RUN apt-get update \
 RUN /bin/sh -c a2enmod rewrite
 RUN /bin/sh -c a2enmod include
 
+COPY .htaccess /var/www/html/
 COPY ./ /var/www/html/
 
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf

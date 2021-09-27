@@ -1,0 +1,17 @@
+Options +Includes
+
+AddHandler php7-script .html
+AddOutputFilter INCLUDES .html
+DirectoryIndex index.html index.php .ht
+
+#Returns 404 status unlisted plans
+RewriteEngine On
+
+# RewriteCond %{REQUEST_FILENAME} -d [OR]
+# RewriteCond %{REQUEST_FILENAME} -f
+# RewriteRule ^ - [L]
+
+# RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+#404 Redirect
+ErrorDocument 404 https://pressance-loger.com/
