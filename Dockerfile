@@ -7,6 +7,7 @@ RUN apt-get update \
 
 RUN /bin/sh -c a2enmod rewrite
 RUN /bin/sh -c a2enmod include
+RUN /bin/sh -c a2enmod actions
 
 COPY .htaccess /var/www/html/
 COPY health-check.html /var/www/html/
