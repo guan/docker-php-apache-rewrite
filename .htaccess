@@ -12,6 +12,3 @@ RewriteEngine On
 # RewriteRule ^ - [L]
 
 # RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
-
-#404 Redirect
-ErrorDocument 404 https://pressance-loger.com/
